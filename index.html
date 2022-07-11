@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<HTML>
+  <HEAD>
+    <title>Spencer and Williams Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.0/themes/reset-min.css">
+  </head>
+  <BODY>
+    <H1>Spencer and Williams Demo - July 2022</H1>
+    <BR>
+    <header>
+      <div id="input-container">
+        <input id="search-input" placeholder="Search for products">
+      </div>
+      <br>
+    </header>
+    <main>
+      <table border=0 cols=3>
+        <tr>
+          <td valign="top">
+            <div id="left">
+              <h5 class="filter-title">Ratings</h5>
+              <div class="filter-widgets" id="rating"></div>
+              <h5 class="filter-title">Free shipping</h5>
+              <div class="filter-widgets" id="free_shipping"></div>
+              <h5 class="filter-title">Price range</h5>
+              <div class="filter-widgets" id="price_range"></div>
+            </div>
+          </td>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td>
+            <div id="right">
+              <div id="hits"></div>
+            </div>
+            <div id="pagination"></div>
+          </td>
+        </tr>
+      </table>
+    </main>
+    <script type="text/html" id="hit-template">
+    {{name}} Price: £{{price}}
+    <div class="hit">
+      <div class="hit-image">
+        <img src="{{image}}" alt="{{name}}">
+      </div>
+    </div>
+    </script>
+  </body>
+  <script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
+  <script src="app.js"></script>
+</HTML>
